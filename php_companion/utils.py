@@ -41,7 +41,10 @@ def find_symbol(symbol, window):
 
     namespacesArray = []
     for key, value in sorted(namespaces.items()):
-        namespacesArray.append([key, value]);
+        # namespacesArray.append([key, value]);
+        # Use statements should import namespaces as fully qualified names
+        # I think there should be an option in key binding to add leading_separator?
+        namespacesArray.append(["\\" + key, value]);
 
     return namespacesArray
 
